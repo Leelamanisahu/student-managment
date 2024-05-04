@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    /* background-color: #ece6e6; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.form-container {
+    width: 50%;
+    max-width: 600px;
+    padding: 12px;
+    /* background: #f2f2f2; */
+    border-radius: 16px;
+    box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+@media only screen and (max-width: 768px) {
+    .form-container {
+        width: 80%;
+    }
+}
+
+.form-container h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input-field {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.input-field label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-field input {
+    width: 90%;
+    padding: 7px;
+    border-radius: 12px;
+    /* border: 1 px solid; */
+    transition: outline-color 0.2s ease-in;
+}
+
+.input-field input  :focus {
+    outline-color: rgb(172, 224, 224);
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    border: none;
+    background: pink;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.4);
+    transition: background 0.2s ease-in-out;
+}
+
+.btn:hover {
+    background: yellow;
+}
+
+.reports-container {
+    margin-top: 50px;
+    width: 80%;
+   
+}
+
+.inner-container{
+    overflow-y: scroll;
+    border-radius: 12px;
+}
+
+.reports {
+    width: 100%;
+}
+
+.reports h1 {
+    text-align: center;
+    margin-bottom: 12px;
+    text-decoration-line: underline;
+}
+
+.table-container {
+    width: 100%;
+}
+
+
+table,
+th,
+td {
+    background: #f2f2f2f2;
+    font-size: 18px;
+    text-align: center;
+    padding: 15px;
+    /* border: 1px solid;*/
+    border-collapse: collapse;
+}
+
+
+
+.edit-btn ,.del-btn{
+    padding:10px;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.4);
+    transition: background 0.2s ease-in-out;
+}
+
+.edit-btn:hover{
+    background: lightblue;
+}
+
+.del-btn:hover{
+    background: lightcoral;
+}
+
+.hide{
+    display: none;
+}
+
+.warning{
+    margin-left: 5px;
+    color: red;
+}
+
+.red{
+    width: 20%;
+    color:red;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin-top: 4px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+@media screen and (max-width:769px) {
+    .red{
+        width: 30%;
+    }
+
+    .reports-container{
+        width: 90%;
+    }   
+}
+
+
+.ed-btn{
+    display: flex;
+    gap:5px;
+    justify-content: center;
+}

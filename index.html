@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Add Details -->
+            <div class="form-container" id="formId">
+                <h1>Student Register System</h1>
+                <form action="">
+                    <div class="input-field">
+                        <label for="sName">Student Name</label>
+                        <input type="text" name="studentName" id="sName" required>
+                        <div class="Name red"></div>
+                    </div>
+                    <div class="input-field">
+                        <label for="sId">Student id</label>
+                        <input type="text" name="studentName" id="sId" required>
+                        <div class="id red"></div>
+                    </div>
+                    <div class="input-field">
+                        <label for="sClass">Contact No.</label>
+                        <input type="text" name="studentName" id="contact" required>
+                        <div class="contact red"></div>
+                    </div>
+                    <div class="input-field">
+                        <label for="rollNo">Email</label>
+                        <input type="email" name="studentName" id="email" required>
+                        <div class="email red"></div>
+                    </div>
+                    <div class="input-field">
+                        <button class="btn submit-btn">Submit</button>
+                        <button class="btn edit-btn hide">Done</button>
+                    </div>
+                </form>
+            </div>
+            <!-- Report  -->
+            <div class="reports-container">
+                <div class="reports">
+                    <h1>Report</h1>
+                    <div class="inner-container">
+                        <table class="table-container">
+                            <tr class="col">
+                                <th>S No.</th>
+                                <th>Name</th>
+                                <th>ID</th>
+                                <th>contact</th>
+                                <th>Email</th>
+                                <th>Edit/Delete</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+    </div>
+</body>
+</html>
