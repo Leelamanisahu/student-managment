@@ -8,22 +8,30 @@ const editBtn = document.querySelector(".edit-btn");
 const table = document.querySelector(".table-container");
 const students = JSON.parse(window.localStorage.getItem('students'));
 const col  = document.querySelector(".col")
-
 const studentData = {};
-console.log(email)
-showData();
+console.log(students)
+
 // add student data into the object 
 function addStudent(key, data) {
     studentData[`${key}`] = data;
 }
 // upload the JSON data into students or localstorage 
+const studentsArr = [];
 function uploadValue(data) {
-    if (students) {
-        students.push(data);
+    console.log(studentsArr)
+    const existingData = JSON.parse(window.localStorage.getItem("students"));
+    if (existingData) {
+        // If data already exists, push new data into it
+        existingData.push(data);
+        // Update local storage with the updated data
+        window.localStorage.setItem("students", JSON.stringify(existingData));
     } else {
-        students = [data];
+        // If no data exists, create a new array with the new data
+        const newData = [data];
+        // Update local storage with the new data
+        window.localStorage.setItem("students", JSON.stringify(newData));
     }
-    window.localStorage.setItem("students", JSON.stringify(students));}
+}
 
 // Regular expressions for validation
 const phoneRegex = /^\d{10}$/; // Validates a 10-digit phone number
@@ -32,6 +40,7 @@ const idRegex = /^\d+$/; // Validates numeric value only
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Validates email format
 
 btn.addEventListener('click', (e) => {
+
     e.preventDefault();
 
     // clear the error message
@@ -99,7 +108,7 @@ students.forEach((element,index )=> {
     `)
 });
 }
-
+showData();
 // delete feature on button click
 table.addEventListener('click',(e)=>{
     // check for the button that contains del-btn class
